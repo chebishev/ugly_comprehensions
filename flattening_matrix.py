@@ -1,3 +1,8 @@
+print([item for sublist in [[int(x) for x in input().split(", ")] for _ in range(int(input()))] for item in sublist])
+
+# how did I get here?
+# Once upon a time....
+
 # Flattening Matrix
 # Write a program that receives a matrix and prints the flattened version of it (a list with all the values). 
 # For example, the flattened list of the matrix: [[1, 2], [3, 4]] will be [1, 2, 3, 4].
@@ -18,7 +23,7 @@ for row in matrix:
 
 print(output_matrix)
 
-# So you can read the matrix in one row without declaring the rows variable:
+# So you can read the matrix in one row without declaring the "rows" variable:
 matrix = [int(x) for x in input().split(", ")] for _ in range(int(input()))]
 # Adding the row above in the print statement gave me the idea for this repo
 # without this row the final solution would be more readable:
@@ -26,8 +31,8 @@ print([item for sublist in matrix for _ in range(int(input()))] for item in subl
 
 # the flattening works on this principle:
 print([item for sublist in matrix for item in sublist])
-# and it isn't quite readable in this varian too
-# so this is the solution that makes sense:
+# and it isn't quite readable in this varianrt too
+# so this is the example solution that makes sense:
 flatten_list = []
 for sublist in matrix:
     for item in sublist:
@@ -42,10 +47,8 @@ for row in range(rows):
 
 print([item for sublist in matrix for item in sublist])
 
-# One row solution:
+# And again the one row solution:
 print([item for sublist in [[int(x) for x in input().split(", ")] for _ in range(int(input()))] for item in sublist])
-
-
 
 # test inputs:
 
