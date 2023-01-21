@@ -5,7 +5,11 @@
 
 matrix = [[int(x) for x in input().split()] for _ in range(int(input()))]
 print(sum(matrix[row][row] for row in range(len(matrix))))
+# or
+rows = int(input())
+print(sum([[int(x) for x in input().split()] for _ in range(int(input()))][row][row] for row in range(len(rows))))
 
+# The origin:
 # this is already used in the previous file, but still this is a way to read a matrix with a number, 
 # taken from the input as a range
 matrix = [[int(x) for x in input().split()] for _ in range(int(input()))]
@@ -28,6 +32,17 @@ print(sum(matrix[row][row] for row in range(len(matrix))))
 [[int(x) for x in input().split()] for _ in range(int(input()))]
 # but it is used twice, so at this point I can't do this to you 
 # and I am leaving it as a two rows solution
+# We can start with variable for the matrix size:
+rows = int(input())
+# and the second row must be:
+print(sum(matrix[row][row] for row in range(len(matrix))))
+# but we are swaping the matrix with the other comprehension:
+[[int(x) for x in input().split()] for _ in range(int(input()))]
+# and for the range we are putting the "rows" again:
+print(sum([[int(x) for x in input().split()] for _ in range(int(input()))][row][row] for row in range(len(rows))))
+
+
+
 
 
 # test inputs:
