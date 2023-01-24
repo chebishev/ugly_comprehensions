@@ -8,7 +8,7 @@ number_of_names = int(input())
 unique_names_set = set()
 
 for name in range(number_of_names):
-  current_name = input()
+	current_name = input()
   unique_names_set.add(current_name)
   
 print(*unique_names_set, sep="\n")
@@ -24,3 +24,25 @@ unique_names_set = set(input() for name in range(number_of_names))
 print("\n".join(set(input() for name in range(int(input())))))
 
 # Have fun!
+
+# test inputs:
+
+# 6
+# George
+# George
+# George
+# Peter
+# George
+# NiceGuy1234
+
+# 10
+# Peter
+# Maria
+# Peter
+# George
+# Steve
+# Maria
+# Alex
+# Peter
+# Steve
+# George
